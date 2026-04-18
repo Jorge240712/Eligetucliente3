@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CliniPet Pro | Dra. Ramírez</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="brand">
+            <h1>CliniPet<span>PRO</span></h1>
+            <p><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia</p>
+        </div>
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <small>PACIENTES</small>
+                <strong id="totalPacientes">0</strong>
+            </div>
+            <div class="stat-card highlight">
+                <small>CAJA TOTAL</small>
+                <strong id="valorCaja">$0</strong>
+            </div>
+        </div>
+    </header>
+
+    <div id="alertaEmergencia" class="alerta-sirena oculto">
+        <i class="fa-solid fa-circle-exclamation"></i> 🚨 CÓDIGO ROJO: URGENCIAS EN ESPERA
+    </div>
+
+    <section class="monitor-wrapper">
+        <div id="monitorTurnos" class="monitor-display">
+            <div class="monitor-info">
+                <span class="monitor-tag">ESTADO ACTUAL</span>
+                <h2 id="pacienteLlamado">SISTEMA LISTO</h2>
+            </div>
+            <div class="monitor-actions">
+                <button id="btnSiguiente" class="btn-primary-glow" onclick="llamarSiguiente()">
+                    <i class="fa-solid fa-bell"></i> SIGUIENTE PACIENTE
+                </button>
+                <button id="btnAtendido" class="btn-outline-light oculto" onclick="finalizarAtencion()">
+                    <i class="fa-solid fa-check-double"></i> YA LO ATENDÍ
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <nav class="filter-bar">
+            <div class="search-group">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="inputBusqueda" placeholder="Buscar por nombre o dueño...">
+            </div>
+            
+            <select id="selectEspecie" class="modern-select">
+                <option value="todos">Todas las especies</option>
+                <option value="perro">Caninos</option>
+                <option value="gato">Felinos</option>
+                <option value="otro">Otros</option>
+            </select>
+
+            <label class="toggle-container">
+                <input type="checkbox" id="checkActivo" checked>
+                <span class="slider"></span>
+                <span class="label-text">Solo Activos</span>
+            </label>
+        </nav>
+
+        <section id="gridPacientes" class="grid-layout"></section>
+
+        <div id="vacio" class="empty-state oculto">
+            <i class="fa-solid fa-paw"></i>
+            <p>No hay pacientes que coincidan con la búsqueda.</p>
+        </div>
+    </main>
+
+    <div id="toast" class="toast-notification oculto"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
