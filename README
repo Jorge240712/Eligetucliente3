@@ -1,0 +1,35 @@
+🐾 CliniPet Pro - Panel de Control Veterinaria
+¡Bienvenido a CliniPet Pro! Esta es una aplicación web interactiva diseñada para la Dra. Ramírez en la sede de Neuquén. El sistema permite gestionar pacientes de forma eficiente, priorizando emergencias y organizando la caja diaria.
+
+✨ Características Principales
+Monitor de Turnos Inteligente: Sistema de llamado con lógica de triaje (prioriza pacientes críticos y luego por horario de cita).
+
+Gestión de Pacientes: Visualización estética de 10 pacientes con tarjetas informativas.
+
+Filtros Avanzados: Búsqueda en tiempo real por nombre de mascota o dueño y filtrado por especie.
+
+Alertas de Emergencia: Banner dinámico con efecto sirena 🚨 cuando hay pacientes en estado crítico.
+
+Interfaz Premium: Diseño Glassmorphism con animaciones de entrada y efectos visuales modernos.
+
+Experiencia Sonora: Efectos de sonido integrados para llamadas de pacientes y confirmación de atención.
+
+🛠️ Tecnologías Utilizadas
+HTML5: Estructura semántica.
+
+CSS3: Diseño responsivo, animaciones @keyframes y variables personalizadas.
+
+JavaScript (ES6+): Lógica de filtrado (filter), ordenamiento (sort), cálculos de caja (reduce) y manejo del DOM.
+
+FontAwesome: Iconografía profesional.
+
+Google Fonts: Tipografía "Inter" para un look moderno.
+
+🚀 Cómo usar la App
+Llamar Paciente: Haz clic en el botón "SIGUIENTE PACIENTE". El sistema seleccionará automáticamente al paciente más urgente.
+
+Atención: Una vez que el paciente esté en el consultorio, aparecerá el botón "YA LO ATENDÍ" para limpiar el monitor.
+
+Búsqueda: Utiliza la barra superior para encontrar pacientes específicos rápidamente.
+
+Alta: Los pacientes atendidos se marcan como inactivos y se descuentan de la lista de espera actual.
